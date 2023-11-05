@@ -1,0 +1,39 @@
+// Defining a mixin
+@mixin border-radius-low {
+    border-radius: 0.4375rem;
+  }
+
+@mixin border-radius-medium {
+    border-radius: 0.9375rem;
+}
+
+@mixin border-radius-high {
+    border-radius: 1.25rem;
+}
+
+    
+ 
+
+  
+  // styles.scss
+$purple: #AA236D;
+$light-red: #FE614C;
+$light-gray: #EAEBEF;
+$dark-purple: #3F1263;
+$magenta: #F21368;
+$yellow: #FFB400;
+$green: #DFFCD1;
+$pink:#FCD1D1;
+$light-pink: #BD9DFF;
+
+
+
+html,
+body,
+section {
+    width: 100vw;
+    padding: 0;
+    margin: 0;
+    overflow-x: hidden !important;
+    scroll-behavior: smooth;
+}
