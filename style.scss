@@ -48,14 +48,14 @@ body {
     transition: background .4s ease;
     position: fixed;
     bottom: 2%;
-    right: 1%;
-    left: 1%;
+    right: 0%;
+    left: 0%;
   }
   
   .navigation .bottom-nav {
       background: #fff;
       width: 95%;
-      height: 3rem;
+      height: 5rem;
       border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
       box-shadow: 0 .4rem 1rem 0 rgba(55, 55, 55, .2);
       padding: 1rem;
@@ -135,3 +135,19 @@ body {
           opacity: 1;
       }
     }
+
+
+.top-text {
+    button {
+        @include border-radius-low;
+        background: #FE614C;
+        border: 0;
+        color: #FFF;
+        text-align: center;
+        // font-family: Proxima Nova;
+        text-transform: uppercase;
+        font-weight: 500;
+
+}
+
+}
