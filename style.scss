@@ -48,13 +48,15 @@ body {
     transition: background .4s ease;
     position: fixed;
     bottom: 2%;
+    right: 1%;
+    left: 1%;
   }
   
     .bottom-nav {
       background: #fff;
       width: 95%;
-      height: 8rem;
-      border-radius: 0 0 3rem 3rem;
+      height: 3rem;
+      border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
       box-shadow: 0 .4rem 1rem 0 rgba(55, 55, 55, .2);
       padding: 1rem;
       display: flex;
@@ -68,7 +70,7 @@ body {
       label {
           cursor: pointer;
           width: 5rem;
-          height: 5rem;
+          height: 3rem;
           display: flex;
           justify-content: center;
           align-items: center;
@@ -79,21 +81,23 @@ body {
           &::before  {
               content: '';
               position: absolute;
-              width: 7rem;
-              height: 7rem;
+              width: 4rem;
+              height: 4rem;
               border-radius: 50%;
               transform: scale(0);
               transition: all .2s cubic-bezier(0.645, 0.045, 0.355, 1);
+              z-index: -1;
           }
       }
   
-      ion-icon {
+      nav-icon {
           font-size: 3.5rem;
           color: inherit;
+          z-index: 10;
       }
   
       input:checked + .home {
-          color: #ff90b5;
+          color: $pink;
         
           > ion-icon:first-child {opacity: 0;}
           &::before{ 
@@ -103,25 +107,25 @@ body {
       }
   
       input:checked + .cart {
-          color: #A439F1;
+        //   color: $pink;
         > ion-icon:first-child {opacity: 0;}
-          &::before{ background: #d9bcee;
+          &::before{ background: $pink;
               transform: scale(1);
           }
       }
   
       input:checked + .fav {
-          color: #00d1c7;
+        //   color: $pink;
         > ion-icon:first-child {opacity: 0;}
-          &::before{ background: #c3eeec;
+          &::before{ background: $pink;
               transform: scale(1);
           }
       }
   
       input:checked + .profile {
-          color: #ffc460;
+        //   color: #ffc460;
         > ion-icon:first-child {opacity: 0;}
-          &::before{ background: #ffebc7;
+          &::before{ background: $pink;
               transform: scale(1);
           }
       }
