@@ -39,7 +39,7 @@ body {
 }
 
 
-.container {
+.navigation .container {
     // min-height: 50vh;
     display: flex;
     justify-content: center;
@@ -52,7 +52,7 @@ body {
     left: 1%;
   }
   
-    .bottom-nav {
+  .navigation .bottom-nav {
       background: #fff;
       width: 95%;
       height: 3rem;
