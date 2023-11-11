@@ -39,6 +39,10 @@ body {
     scroll-behavior: smooth;
 }
 
+.navigation {
+    z-index: 1000000000000000000000 !important;
+}
+
 
 .navigation .container {
     // min-height: 50vh;
@@ -63,6 +67,7 @@ body {
       display: flex;
       justify-content: space-around;
       align-items: center;
+      z-index: 1;
       
       
   
@@ -199,14 +204,84 @@ body {
             background: $magenta;
             box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
             color: $text-white;
-
-
         }
     }
 
-    
+    .top-product {
+        background-color: $magenta;
+        @include border-radius-medium;
+        border: 0;
+        width: 100%;
+        height: 9.625rem;
+        margin: 1.5rem 0;
+        box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+        position: relative;
+        z-index: -10;
 
+
+        .left-pic {
+            position: relative;
+            bottom: 25px;
+            left: 5%;
+
+        }
+
+        .right-text {
+            padding-top: 25px;
+
+
+            span {
+                font-size: 0.9375rem;
+                color: $text-white;
+            }
+
+            h2 {
+                // word-spacing: 5vw;
+                color: $text-white;
+                font-weight: 800;
+            }
+            .stars {
+                font-size: 18px;
+                color: #ffe800;
+            }
+
+            .top-product-but {
+                color: $text-white;
+                @include border-radius-high;
+                background-color: $dark-purple;
+                border: 0;
+                position: absolute;
+                top: 8px;
+                right: 8px;
+            }
+        }
+
+    }
+
+
+    .researcher {
+
+        span {
+            font-family: Proxima Nova;
+            font-size: 0.875rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1.875rem;
+        }
+        h5 {
+            color: #000;
+font-family: Proxima Nova;
+font-size: 1rem;
+font-style: normal;
+font-weight: 400;
+line-height: 1.75rem; /* 175% */
+letter-spacing: 0.03125rem;
+        }
+    }
 
 }
 
 
+body {
+    height: 200vh;
+}
