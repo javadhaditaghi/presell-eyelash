@@ -236,7 +236,7 @@ body {
 }
 .product .product-pros {
   width: 100%;
-  height: 300px;
+  min-height: 300px;
   border-radius: 1.0625rem;
   background: #DFFCD1;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -255,6 +255,16 @@ body {
   padding: 1.5rem 0rem;
   align-items: center;
   border-bottom: 1px solid #C2C5CD;
+}
+.product .product-pros .pros__body {
+  width: 100%;
+  height: 100%;
+}
+.product .product-pros .pros__body .pros__bullet {
+  padding: 0.5rem 1.3rem;
+}
+.product .product-pros .pros__body .pros__bullet svg, .product .product-pros .pros__body .pros__bullet p {
+  display: inline;
 }
 .product .product-cons {
   width: 100%;
@@ -277,6 +287,16 @@ body {
   padding: 1.5rem 0rem;
   align-items: center;
   border-bottom: 1px solid #C2C5CD;
+}
+.product .product-cons .cons__body {
+  width: 100%;
+  height: 100%;
+}
+.product .product-cons .cons__body .cons__bullet {
+  padding: 0.5rem 1.3rem;
+}
+.product .product-cons .cons__body .cons__bullet svg, .product .product-cons .cons__body .cons__bullet p {
+  display: inline;
 }
 
 body {
