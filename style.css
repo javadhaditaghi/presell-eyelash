@@ -229,6 +229,7 @@ body {
   font-style: normal;
   font-weight: 400;
   text-transform: uppercase;
+  line-height: 7px;
 }
 .product .prduct-text {
   background: linear-gradient(180deg, #FFF 0%, rgba(231, 219, 206, 0) 100%);
@@ -240,12 +241,42 @@ body {
   background: #DFFCD1;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
 }
+.product .product-pros .pros__head {
+  display: inline-flex;
+  height: 2.9375rem;
+  width: 100%;
+  padding: 0.3125rem 1.26188rem;
+  align-items: center;
+}
+.product .product-pros h5 {
+  display: flex;
+  width: 100%;
+  height: 2.3125rem;
+  padding: 1.5rem 0rem;
+  align-items: center;
+  border-bottom: 1px solid #C2C5CD;
+}
 .product .product-cons {
   width: 100%;
   height: 300px;
   border-radius: 1.0625rem;
   background: #FCD1D1;
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+}
+.product .product-cons .cons__head {
+  display: inline-flex;
+  height: 2.9375rem;
+  width: 100%;
+  padding: 0.3125rem 1.26188rem;
+  align-items: center;
+}
+.product .product-cons h5 {
+  display: flex;
+  width: 100%;
+  height: 2.3125rem;
+  padding: 1.5rem 0rem;
+  align-items: center;
+  border-bottom: 1px solid #C2C5CD;
 }
 
 body {
