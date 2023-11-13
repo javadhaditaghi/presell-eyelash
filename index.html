@@ -15,6 +15,7 @@
   <section class="navigation">
     <div class="container">
       <div class="bottom-nav">
+        
         <input type="radio" name="radio" value="1" id="tab-1" />
         <label class="icon home" for="tab-1">
           <!-- <ion-icon name="home-outline"></ion-icon>
@@ -38,9 +39,15 @@
               fill="#AA236D" />
           </svg>
         </label>
+        <!-- Dropdown content for Product 2 -->
+        <div class="dropdown-content" id="dropdown-2">
+          <a href="#">Product 1</a>
+          <a href="#">Product 2</a>
+          <a href="#">Product 3</a>
+        </div>
 
         <input type="radio" name="radio" value="3" id="tab-3" />
-        <label class="icon fav" for="tab-3">
+        <label class="icon fav " id="theme-button" for="tab-3">
           <!-- <ion-icon name="heart-outline"></ion-icon>
             <ion-icon class="fill" name="heart"></ion-icon> -->
           <svg xmlns="http://www.w3.org/2000/svg" width="29" height="29" viewBox="0 0 29 29" fill="none"
@@ -260,14 +267,14 @@
 
                 <div class="progressbar-warp">
                   <div class="skills" data-percent="95%">
-  
+
                     <div class="title-bar">
                       <h5>5 star</h5>
                     </div>
                     <!-- <span>95%</span> -->
                     <div class="skillbar"></div>
                   </div>
-  
+
                   <div class="skills" data-percent="98%">
                     <div class="title-bar">
                       <h5>4 star</h5>
@@ -275,9 +282,9 @@
                     <!-- <span>98%</span> -->
                     <div class="skillbar"></div>
                   </div>
-  
+
                   <div class="skills" data-percent="99%">
-  
+
                     <div class="title-bar">
                       <h5>3 star</h5>
                     </div>
@@ -285,7 +292,7 @@
                     <div class="skillbar"></div>
                   </div>
                   <div class="skills" data-percent="100%">
-  
+
                     <div class="title-bar">
                       <h5>2 star</h5>
                     </div>
@@ -306,20 +313,132 @@
                         <span>100%</span>
                         <div class="skillbar"></div>
                     </div> -->
-  
+
                 </div>
-  
+
               </div>
-  
+
               <div class="col-8 form-wrapper">
                 <form action="post">
-                  
+
                   <input type="email" name="" id="" placeholder="Email">
                   <textarea name="" id="" placeholder="Your Comment"></textarea>
-  
+
                 </form>
-  
+
               </div>
+            </div>
+            <div class="row d-flex justify-content-center">
+              <button class="btn-send text-center" type="submit">Send</button>
+            </div>
+
+            <div class="row">
+              <div class="review-wrapper">
+                <div class="reviewer-name d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 27 27" fill="none">
+                    <circle cx="13.5" cy="13.5" r="13.5" fill="#B5A6C1" />
+                  </svg>
+                  <p class="mb-0 review-name__text">Katie</p>
+                </div>
+
+
+                <div class="star-review d-flex align-items-center">
+                  <div class="star-review__wrapper ps-3 pt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                  </div>
+                  <div class="star-review__text">
+                    <p class="mb-0 rating">(5/5)</p>
+                  </div>
+                </div>
+                <blockquote class="ps-3">This ia the best eyelash serum I have ever used.</blockquote>
+                <div class="reviewer-comment px-3">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora assumenda eveniet, nulla,
+                    consequatur ipsam fugiat odio adipisci similique ducimus distinctio, tempore provident explicabo
+                    magni labore sint. Magni, iste! Dolores, explicabo?</p>
+                </div>
+                <hr>
+
+
+              </div>
+
+              <div class="review-wrapper">
+                <div class="reviewer-name d-flex align-items-center">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="70" height="70" viewBox="0 0 27 27" fill="none">
+                    <circle cx="13.5" cy="13.5" r="13.5" fill="#B5A6C1" />
+                  </svg>
+                  <p class="mb-0 review-name__text">Katie</p>
+                </div>
+
+
+                <div class="star-review d-flex align-items-center">
+                  <div class="star-review__wrapper ps-3 pt-2">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="30" height="31" viewBox="0 0 12 13" fill="none">
+                      <path
+                        d="M4.45823 5.34618H4.63844L4.69541 5.17521L5.9443 1.42707L7.1932 5.17521L7.25016 5.34618H7.43038H11.1761L8.0172 7.87429L7.88115 7.98317L7.93623 8.1485L9.15466 11.8052L6.10051 9.36094L5.9443 9.23592L5.78809 9.36094L2.73394 11.8052L3.95237 8.1485L4.00746 7.98317L3.8714 7.87429L0.712481 5.34618H4.45823Z"
+                        fill="#FFA41C" stroke="#E07C22" stroke-width="0.5" />
+                    </svg>
+                  </div>
+                  <div class="star-review__text">
+                    <p class="mb-0 rating">(5/5)</p>
+                  </div>
+                </div>
+                <blockquote class="ps-3">This ia the best eyelash serum I have ever used.</blockquote>
+                <div class="reviewer-comment px-3">
+                  <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Tempora assumenda eveniet, nulla,
+                    consequatur ipsam fugiat odio adipisci similique ducimus distinctio, tempore provident explicabo
+                    magni labore sint. Magni, iste! Dolores, explicabo?</p>
+                </div>
+
+              </div>
+              <div class="d-flex justify-content-center">
+                <button class="btn-readmore text-center mb-3">Read More</button>
+              </div>
+
+
             </div>
 
           </div>

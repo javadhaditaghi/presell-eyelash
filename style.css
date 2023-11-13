@@ -8,6 +8,29 @@ body {
   scroll-behavior: smooth;
 }
 
+/* Your existing styles */
+body.dark-mode input:checked + .fav {
+  color: black;
+}
+body.dark-mode input:checked + .fav > svg path {
+  fill: black;
+}
+
+body.dark-mode .product .product-pros {
+  background: #287105;
+}
+
+body.dark-mode .product .product-cons {
+  background: #a30404;
+}
+
+/* Add your dark mode styles here */
+body.dark-mode {
+  background-color: #1a1a1a;
+  color: #ffffff;
+}
+
+/* Continue with your regular styles */
 .navigation {
   z-index: 1000000000000000000000 !important;
 }
@@ -25,8 +48,8 @@ body {
 
 .navigation .bottom-nav {
   background: #fff;
-  width: 95%;
-  height: 5rem;
+  width: 100%;
+  height: 4.5rem;
   border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
   box-shadow: 0 0.4rem 1rem 0 rgba(55, 55, 55, 0.2);
   padding: 1rem;
@@ -34,6 +57,23 @@ body {
   justify-content: space-around;
   align-items: center;
   z-index: 1;
+}
+.navigation .bottom-nav .dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+.navigation .bottom-nav .dropdown-content a {
+  padding: 12px 16px;
+  display: block;
+  text-decoration: none;
+  color: #333;
+}
+.navigation .bottom-nav .dropdown-content a:hover {
+  background-color: #f1f1f1;
 }
 .navigation .bottom-nav input {
   display: none;
@@ -200,7 +240,6 @@ body {
   line-height: 1.875rem;
 }
 .sorting .researcher h5 {
-  color: #000;
   font-size: 1rem;
   font-style: normal;
   font-weight: 400;
@@ -312,31 +351,35 @@ body {
   font-weight: 400;
   text-transform: uppercase;
   line-height: 7px;
+  position: relative;
+  z-index: -1;
 }
 .product .product-info {
   width: 100%;
-  height: 700px;
   display: flex;
   align-items: center;
   top: 100px;
+  z-index: -1;
 }
-.product .product-info__wrapper {
+.product .product-info .product-info__wrapper {
+  position: relative;
   width: 100%;
   height: 100%;
   border-radius: 0.9375rem;
   box-shadow: 0px 0px 3px 2px rgba(0, 0, 0, 0.25);
-  background-color: #ffffff;
   z-index: -1;
   /* ------------------------------Detailed Info --------------------------------- */
 }
-.product .product-info__wrapper .progressbar-warp {
+.product .product-info .product-info__wrapper .progressbar-warp {
   padding: 10px 25px;
   /* box-shadow: 1px 3px 20px 7px #ededed; */
   max-width: 767px;
-  margin: 35px auto;
+  margin: 10px auto;
+  margin-bottom: 0;
   padding-right: 15px;
+  padding-bottom: 0;
 }
-.product .product-info__wrapper .progressbar-warp .skills {
+.product .product-info .product-info__wrapper .progressbar-warp .skills {
   border: 0.5px solid #bbbfbf;
   background: #f0f2f2;
   width: 100%;
@@ -345,45 +388,119 @@ body {
   margin: 7px 0px;
   border-radius: 0.125rem 0rem 0rem 0.125rem;
 }
-.product .product-info__wrapper .progressbar-warp .skills .title-bar {
+.product .product-info .product-info__wrapper .progressbar-warp .skills .title-bar {
   position: absolute;
   top: -2px;
   padding-left: 5px;
   text-transform: capitalize;
 }
-.product .product-info__wrapper .progressbar-warp .skills .title-bar h5 {
+.product .product-info .product-info__wrapper .progressbar-warp .skills .title-bar h5 {
   font-size: 0.75rem;
   line-height: 1.8;
   color: #ffffff;
 }
-.product .product-info__wrapper .progressbar-warp .skills .skillbar {
+.product .product-info .product-info__wrapper .progressbar-warp .skills .skillbar {
   background-color: #fe614c;
   width: 0px;
-  height: 17px;
+  height: 19px;
   border-radius: 0.125rem 0rem 0rem 0.125rem;
 }
-.product .product-info__wrapper .form-wrapper {
-  padding: 12px 0px;
+.product .product-info .product-info__wrapper .form-wrapper {
+  margin-bottom: 0;
+  padding: 12px 36px 0px 0px;
   max-width: 767px;
-  margin: 40px auto;
-  padding-right: 36px;
+  margin: 15px auto;
+  margin-bottom: 0;
 }
-.product .product-info__wrapper .form-wrapper form input, .product .product-info__wrapper .form-wrapper form textarea {
+.product .product-info .product-info__wrapper .form-wrapper form input,
+.product .product-info .product-info__wrapper .form-wrapper form textarea {
   border: 0.5px solid #bbbfbf;
   background: #f0f2f2;
   border-radius: 0.125rem 0rem 0rem 0.125rem;
   width: 100%;
   margin-bottom: 10px;
 }
-.product .product-info__wrapper .form-wrapper form textarea {
+.product .product-info .product-info__wrapper .form-wrapper form textarea {
   height: 89px;
 }
-.product .product-info__wrapper .form-wrapper input::placeholder, .product .product-info__wrapper .form-wrapper textarea::placeholder {
+.product .product-info .product-info__wrapper .form-wrapper input::placeholder,
+.product .product-info .product-info__wrapper .form-wrapper textarea::placeholder {
   color: #bbbfbf; /* Change the color */
   font-style: italic; /* Italicize the text */
   font-size: 12px; /* Adjust the font size */
   /* Add other styling properties as needed */
   padding-left: 5px;
+}
+.product .product-info .product-info__wrapper .btn-send {
+  border-radius: 0.1375rem;
+  background: #ffb400;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 83%;
+  height: 2.5625rem;
+  padding: 0.625rem 4.625rem;
+  margin-top: 0px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 7px;
+}
+.product .product-info .product-info__wrapper .review-wrapper {
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  justify-content: center;
+  flex-shrink: 0;
+  padding: 20px;
+}
+.product .product-info .product-info__wrapper .review-wrapper .reviewer-name svg {
+  width: 5.5rem;
+  height: 3.5rem;
+  padding: 0 10px;
+}
+.product .product-info .product-info__wrapper .review-wrapper .reviewer-name .review-name__text {
+  text-align: center;
+  font-family: Proxima Nova;
+  font-size: 1.275rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 2.125rem; /* 242.857% */
+}
+.product .product-info .product-info__wrapper .review-wrapper .star-review svg {
+  width: 1.3rem;
+}
+.product .product-info .product-info__wrapper .review-wrapper .star-review .rating {
+  padding-top: 5px;
+  font-size: 18px;
+  padding-left: 10px;
+}
+.product .product-info .product-info__wrapper .review-wrapper blockquote {
+  color: #6c706e;
+  text-align: left;
+  font-family: Proxima Nova;
+  font-size: 0.8875rem;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.125rem; /* 309.091% */
+}
+.product .product-info .product-info__wrapper .review-wrapper .reviewer-comment {
+  text-align: justify;
+}
+.product .product-info .product-info__wrapper .btn-readmore {
+  border-radius: 0.1375rem;
+  background: #f21368;
+  box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  width: 88%;
+  height: 2.5625rem;
+  padding: 0.625rem 4.625rem;
+  margin-top: 0px;
+  color: #ffffff;
+  font-size: 1.25rem;
+  font-style: normal;
+  font-weight: 400;
+  text-transform: uppercase;
+  line-height: 7px;
 }
 
 body {
