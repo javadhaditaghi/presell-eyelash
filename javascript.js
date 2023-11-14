@@ -1,33 +1,27 @@
-///////////////////////////////
-/////////Drop down toggle//////////
+//////////////////////////////////
+/////////Dropdown Menue//////////
 //////////////////////////////
 
-// Get the radio button and dropdown content elements
-const tab2 = document.getElementById('tab-2');
-const cartIcon = document.querySelector('.icon.cart');
-const dropdownContent = document.querySelector('.dropdown-content');
+document.addEventListener('DOMContentLoaded', function () {
+  const tab2 = document.getElementById('tab-2');
+  const cartIcon = document.querySelector('.icon.cart');
+  const dropdownContent = document.querySelector('.dropdown-content');
+  const bottomNav = document.querySelector('.bottom-nav');
 
-// Function to toggle the display of the dropdown content
-function toggleDropdown() {
-  if (tab2.checked) {
-    dropdownContent.style.display = 'block';
-  } else {
-    dropdownContent.style.display = 'none';
-  }
-}
+  tab2.addEventListener('click', function () {
+    // Toggle the display of dropdown content
+    dropdownContent.style.display = (dropdownContent.style.display === 'none') ? 'block' : 'none';
 
-// Attach the function to the change event of the radio button
-tab2.addEventListener('change', toggleDropdown);
-
-// Function to hide the dropdown when clicking outside of it
-function hideDropdown(event) {
-  if (!cartIcon.contains(event.target) && !dropdownContent.contains(event.target)) {
-    dropdownContent.style.display = 'none';
-  }
-}
-
-// Attach the function to the click event of the document body
-document.body.addEventListener('click', hideDropdown);
+    // Add or remove a class based on the display property
+    if (dropdownContent.style.display === 'block') {
+      // Add the style when the dropdown is visible
+      bottomNav.classList.add('rounded-border');
+    } else {
+      // Remove the style when the dropdown is hidden
+      bottomNav.classList.remove('rounded-border');
+    }
+  });
+});
 
 
 

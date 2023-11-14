@@ -10,10 +10,10 @@ body {
 
 /* Your existing styles */
 body.dark-mode input:checked + .fav {
-  color: black;
+  color: black !important;
 }
 body.dark-mode input:checked + .fav > svg path {
-  fill: black;
+  fill: black !important;
 }
 
 body.dark-mode .product .product-pros {
@@ -46,6 +46,14 @@ body.dark-mode {
   left: 0%;
 }
 
+.navigation .bottom-nav.rounded-border {
+  border-radius: 0rem 0rem 1.25rem 1.25rem !important;
+  -webkit-border-radius: 0rem 0rem 1.25rem 1.25rem !important;
+  -moz-border-radius: 0rem 0rem 1.25rem 1.25rem !important;
+  -ms-border-radius: 0rem 0rem 1.25rem 1.25rem !important;
+  -o-border-radius: 0rem 0rem 1.25rem 1.25rem !important;
+}
+
 .navigation .bottom-nav {
   background: #fff;
   width: 100%;
@@ -62,9 +70,16 @@ body.dark-mode {
   display: none;
   position: absolute;
   background-color: #f9f9f9;
-  min-width: 160px;
-  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(10px); /* Adjust the value for the desired blur amount */
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 -1px 6px rgba(0, 0, 0, 0.2);
   z-index: 1;
+  width: 94%;
+  bottom: 99%;
+  z-index: -1;
+  border-radius: 1.25rem;
+  border-bottom-right-radius: 0%;
+  border-bottom-left-radius: 0%;
 }
 .navigation .bottom-nav .dropdown-content a {
   padding: 12px 16px;
