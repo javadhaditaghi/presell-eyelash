@@ -78,6 +78,23 @@ $(document).ready(function () {
 
 
 ///////////////////////////////
-/////////Progressbars//////////
+/////////Magnifier//////////
 //////////////////////////////
 
+function increaseFontSize() {
+  changeFontSize('.text', 2);
+}
+
+function decreaseFontSize() {
+  changeFontSize('.text', -2);
+}
+
+function changeFontSize(selector, changeAmount) {
+  const elements = document.querySelectorAll(selector);
+
+  elements.forEach(element => {
+    const currentFontSize = parseFloat(window.getComputedStyle(element).fontSize);
+    const newFontSize = currentFontSize + changeAmount;
+    element.style.fontSize = newFontSize + 'px';
+  });
+}

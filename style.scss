@@ -28,6 +28,23 @@
   border-bottom: 1px solid #c2c5cd;
 }
 
+@mixin button-hover-effect {
+  transition: box-shadow 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+    // Customize the box-shadow effect as needed
+  }
+
+  &:active {
+    transform: translateY(2px);
+    // Add any other active state effect properties here
+  }
+}
+
+
+
 @mixin shop-now__btn {
   @include border-radius-low;
   background: $yellow;
@@ -42,7 +59,19 @@
   font-weight: 400;
   text-transform: uppercase;
   line-height: 7px;
+  @include button-hover-effect
+  
 }
+
+
+.text {
+  font-size: 16px;
+  line-height: 1.5;
+  margin-bottom: 20px;
+}
+
+
+
 
 // styles.scss
 $purple: #aa236d;
@@ -64,6 +93,11 @@ body {
   box-sizing: border-box;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
+}
+
+body, .container, .sorting, .product {
+  position: relative;
+  z-index: -1;
 }
 
 /* Your existing styles */
@@ -94,6 +128,7 @@ body.dark-mode {
 
 
 .navigation {
+  position: relative;
   z-index: 1000000000000000000000 !important;
 }
 
@@ -245,7 +280,6 @@ body.dark-mode {
   }
 
   input:checked + .profile {
-    //   color: #ffc460;
     > ion-icon:first-child {
       opacity: 0;
     }
@@ -268,7 +302,6 @@ body.dark-mode {
     border: 0;
     color: #fff;
     text-align: center;
-    // font-family: Proxima Nova;
     text-transform: uppercase;
     font-weight: 500;
   }
@@ -284,7 +317,6 @@ body.dark-mode {
     background: #aa236d;
     position: absolute;
     top: 109px;
-    // right: 12px;
     z-index: -1;
 
     h1 {
@@ -308,6 +340,7 @@ body.dark-mode {
 
   button {
     @include border-radius-medium;
+    @include button-hover-effect;
     background: $light-gray;
     border: 0;
     padding: 10px 20px;
@@ -347,7 +380,7 @@ body.dark-mode {
       }
 
       h2 {
-        // word-spacing: 5vw;
+
         color: $text-white;
         font-weight: 800;
       }
@@ -377,8 +410,7 @@ body.dark-mode {
       line-height: 1.875rem;
     }
     h5 {
-      // color: #000;
-      // font-family: Proxima Nova;
+
       font-size: 1rem;
       font-style: normal;
       font-weight: 400;
@@ -405,6 +437,7 @@ body.dark-mode {
 
     .product-btn {
       @include shop-now__btn;
+      @include button-hover-effect
     }
   }
   .prduct-text {
@@ -443,7 +476,7 @@ body.dark-mode {
 
   .product-cons {
     width: 100%;
-    height: 300px;
+    // height: 300px;
     border-radius: 1.0625rem;
     background: #fcd1d1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -475,16 +508,16 @@ body.dark-mode {
     @include shop-now__btn;
     position: relative;
     z-index: -1;
+
+
   }
 
   .product-info {
     width: 100%;
-    // height: 700px;
-    // fill: #FFF;
-    // filter: drop-shadow(0px 4px 4px rgba(0, 0, 0, 0.25));
+
     display: flex;
     align-items: center;
-    top: 100px;
+    top: 30px;
     z-index: -1;
 
     .product-info__wrapper {
@@ -497,16 +530,61 @@ body.dark-mode {
       z-index: -1;
 
       /* ------------------------------Detailed Info --------------------------------- */
+      .rating-info {
+        display: inline-block;
+        margin-left: 20px;
+
+      }
+
+
+      .star-review-1 {
+        display: inline-block;
+
+        border-bottom: 2px solid rgb(175 175 175);
+        width: 90%;
+        padding-bottom: 8px;
+        margin-left: 20px;
+
+          .num-people {
+            color: #717373; /* Change the color */
+          font-style: italic; /* Italicize the text */
+          font-size: 12px; /* Adjust the font size */
+          padding-left: 5px;
+          }
+
+        
+      }
+
+      
+      
+      .rating-box {
+        display: inline-block;
+
+
+        .rating-container {
+          direction: rtl !important;
+          label {
+            display: inline-block;
+            color: #d4d4d4;
+            cursor: pointer;
+            font-size: 30px;
+            transition: color 0.2s;
+          }
+          input {
+            display: none;
+          }
+          label:hover, label:hover ~ label, input:checked ~ label  {
+            color: #ffb400;
+          }
+        }
+      }
 
       .progressbar-warp {
-        // background: #ffffff;
-        padding: 10px 25px;
-        /* box-shadow: 1px 3px 20px 7px #ededed; */
+        padding: 0px 25px;
         max-width: 767px;
-        margin: 10px auto;
-        margin-bottom: 0;
+        margin-bottom: 10px;
         padding-right: 15px;
-        padding-bottom: 0;
+        padding-bottom: 0px;
 
         .skills {
           border: 0.5px solid #bbbfbf;
@@ -541,9 +619,9 @@ body.dark-mode {
 
       .form-wrapper {
         margin-bottom: 0;
-        padding: 12px 36px 0px 0px;
+        padding: 5px 36px 0px 0px;
         max-width: 767px;
-        margin: 15px auto;
+        margin-bottom: 15px;
         // padding-right: 36px;
         margin-bottom: 0;
 
@@ -555,7 +633,6 @@ body.dark-mode {
 
           width: 100%;
           margin-bottom: 10px;
-          // background: #ffffff;
         }
 
         form textarea {
@@ -586,6 +663,7 @@ body.dark-mode {
         font-weight: 400;
         text-transform: uppercase;
         line-height: 7px;
+        @include button-hover-effect
       }
 
       .review-wrapper {
@@ -652,11 +730,17 @@ body.dark-mode {
         font-weight: 400;
         text-transform: uppercase;
         line-height: 7px;
+        @include button-hover-effect
       }
     }
   }
+
+  
 }
 
+
+
+
 body {
-  height: 500vh;
+  height: 700vh;
 }
