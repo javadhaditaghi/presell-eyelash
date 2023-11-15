@@ -788,6 +788,11 @@ body.dark-mode {
   }
 
   .top-product {
+    height: 11.625rem !important;
+
+    .right-text {
+      padding-top: 48px !important;
+    }
 
     h2 {
       font-size: 30px;
@@ -799,6 +804,10 @@ body.dark-mode {
     .left-pic {
 
       left: 31% !important;
+
+      img {
+        width: 110px;
+      }
     }
 
     

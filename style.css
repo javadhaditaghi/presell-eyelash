@@ -637,6 +637,12 @@ body.dark-mode {
   .sorting .top-product {
     margin-top: 2.5rem;
   }
+  .top-product {
+    height: 11.625rem !important;
+  }
+  .top-product .right-text {
+    padding-top: 48px !important;
+  }
   .top-product h2 {
     font-size: 30px;
   }
@@ -645,6 +651,9 @@ body.dark-mode {
   }
   .top-product .left-pic {
     left: 31% !important;
+  }
+  .top-product .left-pic img {
+    width: 110px;
   }
   .rating-box {
     display: block !important;
