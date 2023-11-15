@@ -309,6 +309,12 @@ body.dark-mode {
 
 .hero {
   height: 250px;
+
+  img{
+    width: 90%; 
+    height: 176px;
+
+  }
   .header-part {
     width: 90%;
     height: 10.3125rem;
@@ -318,6 +324,8 @@ body.dark-mode {
     position: absolute;
     top: 109px;
     z-index: -1;
+
+    
 
     h1 {
       color: #fff;
@@ -378,6 +386,13 @@ body.dark-mode {
         font-size: 0.9375rem;
         color: $text-white;
       }
+
+      strong.break {
+        content: "\A"; 
+        white-space: pre; 
+      }
+
+
 
       h2 {
 
@@ -736,6 +751,64 @@ body.dark-mode {
   }
 
   
+}
+
+
+// Medium devices (tablets, 768px and up)
+@media (min-width: 768px) {
+  .hero {
+    img {
+      width: 67%;
+      height: 249px;
+  }
+
+  .header-part {
+    width: 84%;
+    height: 11.3125rem;
+    top: 190px;
+  }
+
+  }
+
+  .sorting {
+    top: 100px;
+
+    button {
+      border-radius: 0.9375rem;
+      transition: box-shadow 0.3s ease-in-out;
+      background: #eaebef;
+      border: 0;
+      padding: 10px 67px;
+      font-weight: 500;
+    }
+  }
+
+  .sorting .top-product {
+    margin-top: 2.5rem;
+  }
+
+  .top-product {
+
+    h2 {
+      font-size: 30px;
+    }
+    span {
+      font-size: 1.2rem !important;
+    }
+
+    .left-pic {
+
+      left: 31% !important;
+    }
+
+    
+    
+  }
+  .rating-box {
+    display: block !important;
+    padding-right: 8% !important;
+  }
+
 }
 
 
