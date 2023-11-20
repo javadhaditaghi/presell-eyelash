@@ -681,8 +681,10 @@ body.dark-mode {
         @include button-hover-effect
       }
 
+
       .review-wrapper {
-        display: flex;
+        // display: none;
+        display: none;
         width: 100%;
         flex-direction: column;
         justify-content: center;
@@ -730,6 +732,10 @@ body.dark-mode {
         .reviewer-comment {
           text-align: justify;
         }
+      }
+
+      .visible {
+        display: flex;
       }
       .btn-readmore {
         border-radius: 0.1375rem;

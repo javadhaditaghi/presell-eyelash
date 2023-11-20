@@ -550,7 +550,7 @@ body.dark-mode {
   transform: translateY(2px);
 }
 .product .product-info .product-info__wrapper .review-wrapper {
-  display: flex;
+  display: none;
   width: 100%;
   flex-direction: column;
   justify-content: center;
@@ -589,6 +589,9 @@ body.dark-mode {
 }
 .product .product-info .product-info__wrapper .review-wrapper .reviewer-comment {
   text-align: justify;
+}
+.product .product-info .product-info__wrapper .visible {
+  display: flex;
 }
 .product .product-info .product-info__wrapper .btn-readmore {
   border-radius: 0.1375rem;

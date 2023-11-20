@@ -24,9 +24,6 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-
-
-
 ///////////////////////////////
 /////////Night Mode//////////
 //////////////////////////////
@@ -98,3 +95,41 @@ function changeFontSize(selector, changeAmount) {
     element.style.fontSize = newFontSize + 'px';
   });
 }
+
+
+///////////////////////////////
+/////////Read More BTN//////////
+//////////////////////////////
+
+
+
+
+document.addEventListener("DOMContentLoaded", function() {
+  const comments = Array.from(document.querySelectorAll('.review-wrapper'));
+  const readMoreBtn = document.getElementById('readMoreBtn');
+
+  let showComments = 3;
+
+  function toggleCommentsVisibility() {
+    comments.forEach((comment, index) => {
+      if (index < showComments) {
+        comment.classList.add('visible');
+      } else {
+        comment.classList.remove('visible');
+      }
+    });
+  }
+
+  toggleCommentsVisibility();
+
+  readMoreBtn.addEventListener('click', function() {
+    if (showComments === 3) {
+      readMoreBtn.textContent = 'Read Less';
+      showComments = comments.length;
+    } else {
+      readMoreBtn.textContent = 'Read More';
+      showComments = 3;
+    }
+    toggleCommentsVisibility();
+  });
+});
