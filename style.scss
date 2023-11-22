@@ -85,6 +85,8 @@ $pink: #fcd1d1;
 $light-pink: #bd9dff;
 $text-white: #ffffff;
 
+
+
 html,
 body {
   width: 100vw;
@@ -93,6 +95,11 @@ body {
   box-sizing: border-box;
   overflow-x: hidden !important;
   scroll-behavior: smooth;
+}
+
+.contain-all {
+  position: relative;
+  z-index: -1;
 }
 
 body, .container, .sorting, .product {
@@ -123,6 +130,91 @@ body.dark-mode {
   background-color: #1a1a1a;
   color: #ffffff;
 }
+
+
+
+
+
+/* Color of the links BEFORE scroll */
+.navbar-scroll .nav-link,
+.navbar-scroll .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
+
+/* Color of the navbar BEFORE scroll */
+.navbar-scroll {
+  background-color: #ffffff;
+  border-bottom: 0px !important;
+  -webkit-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+  -moz-box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+  box-shadow: 0px 0px 8px 3px rgba(0,0,0,0.75);
+}
+
+/* Color of the links AFTER scroll */
+.navbar-scrolled .nav-link,
+.navbar-scrolled .navbar-toggler-icon,
+.navbar-scroll .navbar-brand {
+  color: #262626;
+}
+
+/* Color of the navbar AFTER scroll */
+.navbar-scrolled {
+  background-color: #fff;
+}
+
+/* An optional height of the navbar AFTER scroll */
+.navbar.navbar-scroll.navbar-scrolled {
+  padding-top: auto;
+  padding-bottom: auto;
+}
+.navbar-brand {
+  font-size: unset;
+  height: 3.5rem;
+}
+
+.navigation-top {
+  #theme-button {
+    cursor: pointer;
+  }
+
+  button {
+    @include border-radius-low;
+    background: #fe614c;
+    border: 0;
+    color: #fff;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: 500;
+    margin: 0 15px;
+  }
+}
+
+
+.magnifier-container {
+  width: 100px; /* Adjust the width as needed */
+  height: 50px; /* Half of the width */
+  background-color: red; /* Change the color as desired */
+  border-radius: 100px 100px 0 0; /* Use a border-radius to create the half-circle shape */
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* Continue with your regular styles */
 
@@ -452,7 +544,16 @@ body.dark-mode {
 
     .product-btn {
       @include shop-now__btn;
-      @include button-hover-effect
+      @include button-hover-effect;
+      margin-top: 0 !important;
+    }
+    .stars {
+      font-size: 18px;
+      color: #ffe800;
+
+      span {
+        color: black;
+      }
     }
   }
   .prduct-text {
@@ -460,8 +561,8 @@ body.dark-mode {
   }
 
   .product-pros {
-    width: 100%;
-    min-height: 300px;
+    // width: 100%;
+    // min-height: 300px;
     border-radius: 1.0625rem;
     background: #dffcd1;
     box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -490,7 +591,7 @@ body.dark-mode {
   }
 
   .product-cons {
-    width: 100%;
+    // width: 100%;
     // height: 300px;
     border-radius: 1.0625rem;
     background: #fcd1d1;
@@ -815,9 +916,13 @@ body.dark-mode {
         width: 110px;
       }
     }
+    
 
     
     
+  }
+  .sorting button {
+    padding: 10px 38px;
   }
   .rating-box {
     display: block !important;
@@ -827,8 +932,174 @@ body.dark-mode {
 }
 
 
+@media (min-width: 992px) { 
+  body {
+    display: flex;
+    justify-content: center;
+  }
+
+  .contain-all {
+    width: 65%;
+  }
+
+  .navigation .container {
+    left: 1% !important;
+}
+
+  .navigation .bottom-nav {
+    background: #fff;
+    width: 79%;
+    height: 4.5rem;
+    border-radius: 1.25rem 1.25rem 1.25rem 1.25rem;
+    box-shadow: 0 0.4rem 1rem 0 rgba(55, 55, 55, 0.2);
+    padding: 1rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    z-index: 1;
+}
+
+
+    .hero {
+      height: 305px;
+      img {
+        width: 62%;
+        height: 441px;
+      }
+      .header-part {
+        width: 78%;
+        height: 11.3125rem;
+        top: 269px;
+      }
+
+    .header-part h1 {
+      color: rgb(255, 255, 255);
+      font-family: Inter;
+      font-size: 2.375rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2.71875rem;
+      text-transform: capitalize;
+      top: 50%;
+      position: absolute;
+      padding: 0px 20px;
+    }
+  }
+
+  .sorting {
+    top: 125px;
+  }
+
+  .top-product {
+    .left-pic {
+      position: relative;
+      bottom: 42px;
+      left: 5%;
+  }
+    .right-text{
+      padding-top: 32px !important;
+
+     
+        .stars {
+        font-size: 24px !important;
+        
+      }
+    }
+    
+
+    // h2 {
+    //   font-size: 45px;
+    // }
+    span {
+      font-size: 1.4rem !important;
+  }
+  }
+
+  .product {
+    .stars {
+      font-size: 30px;
+      color: #ffe800;
+
+      span {
+        color: black;
+      }
+    }
+
+    .form-wrapper {
+      textarea {
+        height: 39px !important;
+        margin-bottom: 7px !important;
+    }
+    }
+    
+  }
+
+
+
+}
+
+@media (min-width: 1400px) {
+  .hero {
+    height: 422px;
+    img {
+      width: 62%;
+      height: 441px;
+    }
+    .header-part {
+      width: 78%;
+      height: 11.3125rem;
+      top: 354px;
+    }
+
+    .header-part h1 {
+      color: rgb(255, 255, 255);
+      font-family: Inter;
+      font-size: 2.375rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 2.71875rem;
+      text-transform: capitalize;
+      top: 50%;
+      position: absolute;
+      padding: 0px 20px;
+    }
+}
+
+.sorting {
+  button {
+    padding: 10px 59px;
+}
+}
+
+.top-product {
+  h2 {
+font-size: 45px;
+}
+
+
+
+  }
+
+}
+
+@media (min-width: 1765px) { 
+  .contain-all {
+    width: 55%;
+  }
+
+}
+
+@media (min-width: 2365px) { 
+  .contain-all {
+    width: 45%;
+  }
+
+}
+
+
 
 
 body {
-  height: 700vh;
+  // height: 700vh;
+  padding-bottom: 250px;
 }
